@@ -1,8 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import device from "./Queries";
 
 const VideoWrapper = styled.section`
   grid-area: 2 / 1 / 7 / 5;
+
+  @media ${device.laptop} {
+    grid-area: 2 / 1 / 2 / 5;
+  }
 `;
 
 const MainVideo = styled.iframe`
@@ -12,6 +17,10 @@ const MainVideo = styled.iframe`
 
 const TitleWrapper = styled.div`
   padding: 15px;
+
+  @media ${device.laptop} {
+    grid-area: 3 / 1 / 3 / 5;
+  }
 `;
 
 const VideoDetail = ({ video }) => {

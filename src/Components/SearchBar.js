@@ -1,8 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import device from "./Queries";
 
 const SearchBarContainer = styled.div`
   grid-area: 1 / 1 / 2 / 7;
+
+  @media ${device.laptop} {
+    grid-area: 1 / 1 / 1 / 5;
+  }
 `;
 
 const Form = styled.form`

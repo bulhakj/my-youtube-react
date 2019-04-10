@@ -4,15 +4,20 @@ import youtube from "../APIs/youtube";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
 import styled from "styled-components";
+import device from "./Queries";
 
 const Container = styled.section`
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  @media ${device.laptop} {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 800px 100px 1fr;
+  }
 `;
 
-console.log(key);
 class App extends React.Component {
   state = {
     videos: [],
