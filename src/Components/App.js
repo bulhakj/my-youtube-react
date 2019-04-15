@@ -14,7 +14,7 @@ const Container = styled.section`
 
   @media ${device.laptop} {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 100px 800px 100px 1fr;
+    grid-template-rows: 80px 1fr;
   }
 `;
 

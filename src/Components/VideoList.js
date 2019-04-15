@@ -8,6 +8,7 @@ const ListOfVideos = styled.section`
 
   @media ${device.laptop} {
     grid-area: 4 / 1 / 4 / 5;
+    padding: 15px;
   }
 `;
 

@@ -7,15 +7,29 @@ const VideoWrapper = styled.section`
 
   @media ${device.laptop} {
     grid-area: 2 / 1 / 2 / 5;
+    position: relative;
   }
 `;
 
 const MainVideo = styled.iframe`
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 `;
 
+const VideoWrap = styled.div`
+  position: relative;
+  border: 0;
+  padding-bottom: 56.25%;
+  margin: 15px;
+  height: 0;
+  overflow: hidden;
+`;
+
 const TitleWrapper = styled.div`
+  width: 100%;
   padding: 15px;
 
   @media ${device.laptop} {
@@ -30,7 +44,9 @@ const VideoDetail = ({ video }) => {
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
   return (
     <VideoWrapper>
-      <MainVideo title="video player" src={videoSrc} />
+      <VideoWrap>
+        <MainVideo title="video player" src={videoSrc} />
+      </VideoWrap>
       <TitleWrapper>
         <h4>{video.snippet.title}</h4>
         <p>{video.snippet.description}</p>
