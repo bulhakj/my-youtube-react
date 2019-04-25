@@ -1,6 +1,6 @@
 Hello!
 
-This is my version of youtube. I'm creating it using React, axios, styled components and Youtube API.
+This is my version of youtube. I'm created it using React, axios, styled-components and Youtube API.
 
 
 How to run this app: 
